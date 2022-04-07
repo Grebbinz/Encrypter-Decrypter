@@ -36,13 +36,14 @@ int main() {
   string choice;
 
   cout << "Enter message: ";
-  cin >> message;
+  getline(cin, message);
 
   cout << "Enter key: ";
   cin >> key;
 
+  cin.ignore();
   cout << "Enter choice (encrypt or decrypt): ";
-  cin >> choice;
+  getline(cin, choice);
 
   if (choice == "encrypt") {
     cout << encrypt(message, key) + "\n";
@@ -51,12 +52,15 @@ int main() {
     cout << decrypt(message, key) + "\n";
   }
   else {
-    cout << "bad input\n";
+    cout << "bad input";
   }
 
-  string any;
-  cout << "Type any key to continue...";
-  cin >> any;
+  // string any;
+  // cout << "Type any key to continue...";
+  // cin >> any;
+
+  cout << "Press enter to continue...\n";
+  cin.get();
 
   return 0;
 }
