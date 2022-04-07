@@ -45,14 +45,18 @@ int main() {
   cin >> choice;
 
   if (choice == "encrypt") {
-    cout << encrypt(message, key);
+    cout << encrypt(message, key) + "\n";
   }
   else if (choice == "decrypt") {
-    cout << decrypt(message, key);
+    cout << decrypt(message, key) + "\n";
   }
   else {
-    cout << "bad input";
+    cout << "bad input\n";
   }
+
+  string any;
+  cout << "Type any key to continue...";
+  cin >> any;
 
   return 0;
 }
