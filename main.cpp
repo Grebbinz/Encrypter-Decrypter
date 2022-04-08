@@ -52,6 +52,7 @@ int main() {
     cout << decrypt(message, key) + "\n";
   }
   else {
+    cin.ignore();
     cout << "bad input";
   }
 
